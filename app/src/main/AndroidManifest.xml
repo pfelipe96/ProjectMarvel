@@ -18,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity
+            android:name=".mvp.mainActivity.ui.DetailPersonage"
+            android:label="Detalhes do personagem"
+            android:parentActivityName=".mvp.mainActivity.ui.MainActivity">
+        </activity>
+    </application>
 </manifest>

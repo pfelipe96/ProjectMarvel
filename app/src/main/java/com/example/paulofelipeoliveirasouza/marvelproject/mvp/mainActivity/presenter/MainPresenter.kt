@@ -27,11 +27,12 @@ class MainPresenter @Inject constructor(
     override fun handlerMarvel(single: Single<PersonagensData>) {
         single.subscribeBy(
                 onError = {
-                    it
+                    view?.snackBarOnError("Ocorreu um erro, por gentileza tente novamente")
                 },
                 onSuccess = {
                     if(it.data?.offset == 0) {
                         view?.loadData(it)
+                        view?.setRefresh(false)
                     }else{
                         view?.loadMoreData(it)
                     }
@@ -40,8 +41,14 @@ class MainPresenter @Inject constructor(
     }
 
     override fun skipMarvelApi(skip: Int) {
-        mainModel.loadMarvelAPI(skip = skip)
+        if(view?.isNetworkAvaliableToContext()!!) {
+            if(skip == 0){
+                view?.setRefresh(true)
+            }
+            mainModel.loadMarvelAPI(skip = skip)
+        }else{
+            view?.snackBarIsNetWorking()
+        }
     }
-
 
 }

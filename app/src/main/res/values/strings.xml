@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MarvelProject</string>
+    <string name="app_name">App Marvel</string>
+    <string name="dialog_title_not_working_networking">Por gentileza verifique a internet, pois a mesma não encontra-se estável!</string>
 </resources>

@@ -7,4 +7,9 @@ interface MainActivityInterface{
     fun loadData(personagensData: PersonagensData)
     fun loadMoreData(personagensData: PersonagensData)
     fun progressBarBottom(visible: Int)
+    fun progressBarCenter(visible: Int)
+    fun setRefresh(visible: Boolean)
+    fun snackBarOnError(message: String)
+    fun isNetworkAvaliableToContext(): Boolean
+    fun snackBarIsNetWorking()
 }

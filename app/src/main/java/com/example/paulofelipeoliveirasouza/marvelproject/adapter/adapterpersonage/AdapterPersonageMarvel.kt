@@ -1,4 +1,4 @@
-package com.example.paulofelipeoliveirasouza.marvelproject.mvp.mainActivity.adapter
+package com.example.paulofelipeoliveirasouza.marvelproject.adapter.adapterpersonage
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -24,6 +24,11 @@ class AdapterPersonageMarvel(private val dataSet: PersonagensData): RecyclerView
     fun loadMoreData(moreData: PersonagensData){
         dataSet.data?.results?.addAll(moreData.data?.results!!)
         this.notifyItemInserted(dataSet.data?.results!!.size - 1)
+        this.notifyDataSetChanged()
+    }
+
+    fun swipeRefresh(){
+        dataSet.data?.results?.clear()
         this.notifyDataSetChanged()
     }
 
