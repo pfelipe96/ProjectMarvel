@@ -14,8 +14,10 @@
 
         <android.support.v7.widget.AppCompatImageButton
             android:id="@+id/photo_personage"
-            android:layout_width="96dp"
-            android:layout_height="96dp" />
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:adjustViewBounds="true"/>
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_margin="8dp"
@@ -35,6 +37,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[Descrição do mesmo]"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:layout_marginRight="8dp"
             android:textSize="12sp"/>
     </RelativeLayout>
 </android.support.v7.widget.CardView>
