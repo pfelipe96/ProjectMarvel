@@ -31,6 +31,10 @@ class DetailPersonage : AppCompatActivity() {
 
     lateinit var mAdapterImageComics: AdapterImageComics
 
+
+    /*Resolvi usa esta classe deste modo (Sem MVP), pois a mesma está bem clean em relação a lógica de negóciao.*/
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_personage)
